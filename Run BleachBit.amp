@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="f964a566-776e-4e7e-a96e-f8a77937722c" Name="Run BleachBit" Description="VXNlcyBCbGVhY2hCaXQgdG8gY2xlYW4gdGhlIGZpbGVzeXN0ZW0uClZlcnkgc2ltaWxhciB0byBDQ2xlYW5lciwgYnV0IG9wZW4tc291cmNlIGFuZCBzdXBwb3J0cyBydW5uaW5nIHZpYSBjb21tYW5kLWxpbmU=" Version="2.3.0.66" RemoteCategory="0" ExecutionType="Local" PS3ObjectCount="0">
+  <Object ID="{04d51713-ee72-42ac-86c8-592ba27566a5}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;config&quot; Label=&quot;BleachBit Config URL&quot; ParameterType=&quot;string&quot; Value=&quot;https://pastebin.com/raw/9K9PyBdU&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;result&quot; Label=&quot;BleachBit Result&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.BB Result&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>2742e08c-748a-4776-bb24-ab07563ac7c5.bbResult</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>result</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>611,2561</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="611,2561" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:FolderExists Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" Conditional="[FolderExists_Conditional]" DisplayName="Folder Exists" Folder="C:\nable" Folder_DisplayArg="C:\nable" sap:VirtualizedContainerService.HintSize="575,88" Moniker="c93b8b74-8709-4842-913c-b6567eb1348e" Result="[FolderExists_Result]" ResultString="[FolderExists_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FolderExists" m_bTextLinkChange="False" />
+        <p:IfObject Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="575,439" Moniker="88864111-e44b-464a-b713-7e67d2917371" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[FolderExists_Conditional]" Variable_DisplayArg="Folder Exists.Conditional" Variable_Type="x:String" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="371,238" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:CreateFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" DisplayName="Create Folder" Folder="C:\nable" FolderInfo="[CreateFolder_FolderInfo]" Folder_DisplayArg="C:\nable" sap:VirtualizedContainerService.HintSize="333,88" Moniker="b35660ed-1319-4c12-a6c3-ce1400129eba" Result="[CreateFolder_Result]" ResultString="[CreateFolder_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateFolder" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="CreateFolder_FolderInfo" />
+                <Variable x:TypeArguments="x:String" Name="CreateFolder_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="CreateFolder_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:FolderExists Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" Conditional="[FolderExists_Conditional_1]" DisplayName="Folder Exists" Folder="C:\nable\BleachBit-Portable" Folder_DisplayArg="C:\nable\BleachBit-Portable" sap:VirtualizedContainerService.HintSize="575,88" Moniker="25639ec8-c8e6-4843-a94c-9bea22ac889a" Result="[FolderExists_Result_1]" ResultString="[FolderExists_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FolderExists" m_bTextLinkChange="False" />
+        <p:IfObject Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="575,839" Moniker="8372425e-5d66-41d4-9ca5-14f30190a8e0" Result="[IfObject_Result_1]" ResultString="[IfObject_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[FolderExists_Conditional_1]" Variable_DisplayArg="Folder Exists.Conditional" Variable_Type="x:String" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="543,638" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL" sap:VirtualizedContainerService.HintSize="505,160" Moniker="291f5802-23f2-4302-9d80-a0607b0ce12e" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="https://download.bleachbit.org/BleachBit-2.0-portable.zip" RemoteFileURL_DisplayArg="https://download.bleachbit.org/BleachBit-2.0-portable.zip" Result="[DownloadFileFromURL_Result]" ResultString="[DownloadFileFromURL_ResultString]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="C:\nable\bbp.zip" SaveAsFileName_DisplayArg="C:\nable\bbp.zip" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
+                <p:ExtractCompressedFiles Destination_Item="{x:Null}" Destination_ItemProp="{x:Null}" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" Destination="C:\nable\" Destination_DisplayArg="C:\nable\" DisplayName="Extract Compressed files" FileName="C:\nable\bbp.zip" FileName_DisplayArg="C:\nable\bbp.zip" sap:VirtualizedContainerService.HintSize="505,124" Moniker="e11c9703-1920-4faf-903b-483a11b705a5" Result="[ExtractCompressedFiles_Result]" ResultString="[ExtractCompressedFiles_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="ExtractCompressedFiles" m_bTextLinkChange="False" />
+                <p:DeleteFile FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" DisplayName="Delete File" FileName="C:\nable\bbp.zip" FileName_DisplayArg="C:\nable\bbp.zip" sap:VirtualizedContainerService.HintSize="505,124" Moniker="91be6405-c2c2-4aba-8785-b8bc3c9b170f" Recurse="False" Recurse_DisplayArg="" Result="[DeleteFile_Result]" ResultString="[DeleteFile_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="DownloadFileFromURL_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result" />
+                <Variable x:TypeArguments="x:String" Name="ExtractCompressedFiles_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="ExtractCompressedFiles_Result" />
+                <Variable x:TypeArguments="x:String" Name="DeleteFile_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="DeleteFile_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL" sap:VirtualizedContainerService.HintSize="575,160" Moniker="e319a22f-15bd-4e61-8304-72b5a29e1050" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="[config]" RemoteFileURL_DisplayArg="Input Parameters.BleachBit Config URL" Result="[DownloadFileFromURL_Result_1]" ResultString="[DownloadFileFromURL_ResultString_1]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="C:\nable\BleachBit-Portable\BleachBit.ini" SaveAsFileName_DisplayArg="C:\nable\BleachBit-Portable\BleachBit.ini" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.3.0.66, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="575,522" Moniker="2742e08c-748a-4776-bb24-ab07563ac7c5" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="88da1e62-71cd-4a38-b7f3-e987d095caf4" m_bTextLinkChange="False" script="JABFAHIAcgBvAHIAQQBjAHQAaQBvAG4AUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAHMAaQBsAGUAbgB0AGwAeQBjAG8AbgB0AGkAbgB1AGUAJwANAAoAJABMAG8AZwBQAGEAdABoACAAPQAgACIAQwA6AFwAbgBhAGIAbABlAFwAYgBiAHAAXwBsAG8AZwAuAHQAeAB0ACIADQAKACQATABvAGcAUABhAHQAdABlAG4AIAA9ACAAIgBEAGkAcwBrACAAcwBwAGEAYwBlACAAcgBlAGMAbwB2AGUAcgBlAGQALgArACIADQAKAA0ACgBDADoAXABuAGEAYgBsAGUAXABCAGwAZQBhAGMAaABCAGkAdAAtAFAAbwByAHQAYQBiAGwAZQBcAGIAbABlAGEAYwBoAGIAaQB0AF8AYwBvAG4AcwBvAGwAZQAuAGUAeABlACAALQAtAHAAcgBlAHMAZQB0ACAALQBjACAAPgAgACQATABvAGcAUABhAHQAaAANAAoAJABiAGIAUgBlAHMAdQBsAHQAIAA9ACAAKABHAGUAdAAtAEMAaABpAGwAZABJAHQAZQBtACAALQBQAGEAdABoACAAJABMAG8AZwBQAGEAdABoACAAfAAgAFMAZQBsAGUAYwB0AC0AUwB0AHIAaQBuAGcAIAAtAFAAYQB0AHQAZQByAG4AIAAkAEwAbwBnAFAAYQB0AHQAZQBuACAALQBDAG8AbgB0AGUAeAB0ACAAMAAsACAAMQAwACkALgBMAGkAbgBlAA==">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="bbResult" ArgType="string" DisplayName="BB Result" Name="bbResult">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_bbResult]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="FolderExists_Conditional" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="FolderExists_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_Conditional_1" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="FolderExists_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="DownloadFileFromURL_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_bbResult" />
+        <Variable x:TypeArguments="x:String" Default="https://pastebin.com/raw/9K9PyBdU" Name="config" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
